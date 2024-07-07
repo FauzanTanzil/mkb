@@ -7,58 +7,93 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About MKB Main
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+MKB Main is a web application for managing various functions related to menus, shopping carts, orders, and user profiles. It is built using the Laravel framework.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- User Authentication
+- Admin Menu Management
+- Shopping Cart Management
+- Order Management
+- User Profile Management
+- Home Page
 
-## Learning Laravel
+## Prerequisites
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Before you begin, ensure you have met the following requirements:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP >= 7.4
+- Composer
+- Node.js with NPM
+- MySQL or other database supported by Laravel
 
-## Laravel Sponsors
+## Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/FauzanTanzil/mkb-main.git
+    cd mkb-main
+    ```
 
-### Premium Partners
+2. Install PHP dependencies using Composer:
+    ```bash
+    composer install
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+3. Install frontend dependencies using NPM:
+    ```bash
+    npm install
+    ```
+
+4. Copy `.env.example` to `.env` and adjust your database configuration:
+    ```bash
+    cp .env.example .env
+    ```
+
+5. Generate application key:
+    ```bash
+    php artisan key:generate
+    ```
+
+6. Run database migrations:
+    ```bash
+    php artisan migrate
+    ```
+
+7. Start the development server:
+    ```bash
+    php artisan serve
+    ```
+
+8. Compile frontend assets:
+    ```bash
+    npm run dev
+    ```
+
+## Usage
+
+- Open `http://localhost:8000` in your browser to access the application.
+- Admin can manage menus through the admin page.
+- Users can add items to the cart, place orders, and update their profiles.
+
+## Directory Structure
+
+- `app/Http/Controllers` - Contains all the controllers of the application.
+- `resources/views` - Contains all the views for the frontend.
+- `routes/web.php` - Contains the route definitions for the web application.
+- `public/` - Contains public files like CSS, JavaScript, and images.
+- `database/migrations` - Contains the database migration files.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you wish to contribute, please fork the repository and make a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+For more information, you can contact Fauzan Tanzil Habibi via [GitHub](https://github.com/FauzanTanzil).
